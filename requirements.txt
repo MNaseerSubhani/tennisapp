@@ -1,0 +1,10 @@
+ultralytics
+supervision
+opencv-python
+numpy
+filterpy
+mediapipe
+tensorflow
+pandas
+scikit-learn
+tqdm

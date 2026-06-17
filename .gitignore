@@ -1,0 +1,52 @@
+# Runtime output
+output/
+
+# Local test media (add your own videos here)
+test/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.Python
+
+# Detection / vision weights 
+models/
+*.pt
+*.h5
+*.pkl
+*.task
+
+# Classification dataset and generated artifacts (large)
+classification/raw/
+classification/raw_old/
+classification/pose_dataset.csv
+
+# Trained classifier artifacts (regenerate with classification/train.py)
+classification/models/tennis_pose_classifier.h5
+classification/models/labels.pkl
+classification/models/scaler.pkl
+
+# Media
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.flv
+*.wmv
+*.webm
+*.mpg
+*.mpeg
+*.m4v
+
+# Generated JSON from pipeline runs (keep docs/schema examples in repo)
+output/**/*.json
+results.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

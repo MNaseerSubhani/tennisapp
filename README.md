@@ -44,7 +44,7 @@ tannisapp/
 ## Requirements
 
 - Python 3.10+ recommended
-- Webcam not required; processes video files with OpenCV
+-  processes video files with OpenCV
 
 ### Install
 

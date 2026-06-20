@@ -8,7 +8,8 @@ The trained model is used at inference time by `core/infer.py` inside the main v
 
 Organize training images under `raw/<class_name>/<video_or_session>/`. Current classes in the dataset:
 
-| Folder | Shot type |
+| Folder | Shot type | 
+
 |--------|-----------|
 | `Bandeja` | Bandeja |
 | `Globo` | Lob (globo) |
@@ -25,12 +26,12 @@ Add or rename folders to match the labels you want the model to predict.
 
 ```
 classification/
-├── raw/                          # Training images (not in git — see root .gitignore)
+├── raw/                          
 │   └── Volea/
 │       └── V1/
 │           ├── 1.PNG
 │           └── 2.PNG
-├── models/                       # Weights and trained artifacts
+├── models_c/                       # Weights and trained artifacts
 │   ├── pose_landmarker_full.task # MediaPipe pose (required)
 │   ├── yolo11m.pt                # Person detector for cropping (required)
 │   ├── tennis_pose_classifier.h5 # Trained classifier (output of train.py)

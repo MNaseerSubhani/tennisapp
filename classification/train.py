@@ -12,7 +12,7 @@ import os
 # Paths
 # -----------------------------
 CSV_PATH = "pose_dataset.csv"
-MODEL_DIR = "models"
+MODEL_DIR = "models_c"
 os.makedirs(MODEL_DIR, exist_ok=True)
 
 # -----------------------------

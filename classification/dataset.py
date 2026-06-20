@@ -279,7 +279,7 @@ from mediapipe.tasks import python
 from mediapipe.tasks.python import vision
 from ultralytics import YOLO  # pip install ultralytics
 
-MODEL_PATH = "models/pose_landmarker_full.task"
+MODEL_PATH = "models_c/pose_landmarker_full.task"
 RAW_DIR = "raw"
 OUTPUT_CSV = "pose_dataset.csv"
 

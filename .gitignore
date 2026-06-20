@@ -25,9 +25,9 @@ classification/raw_old/
 classification/pose_dataset.csv
 
 # Trained classifier artifacts (regenerate with classification/train.py)
-classification/models/tennis_pose_classifier.h5
-classification/models/labels.pkl
-classification/models/scaler.pkl
+classification/models_c/tennis_pose_classifier.h5
+classification/models_c/labels.pkl
+classification/models_c/scaler.pkl
 
 # Media
 *.mp4

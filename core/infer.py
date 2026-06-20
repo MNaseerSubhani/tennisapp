@@ -114,10 +114,10 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 # -----------------------------
 # Paths
 # -----------------------------
-POSE_MODEL_PATH = "classification/models/pose_landmarker_full.task"
-CLASSIFIER_PATH = "classification/models/tennis_pose_classifier.h5"
-LABEL_PATH = "classification/models/labels.pkl"
-SCALER_PATH = "classification/models/scaler.pkl"
+POSE_MODEL_PATH = "classification/models_c/pose_landmarker_full.task"
+CLASSIFIER_PATH = "classification/models_c/tennis_pose_classifier.h5"
+LABEL_PATH = "classification/models_c/labels.pkl"
+SCALER_PATH = "classification/models_c/scaler.pkl"
 
 # -----------------------------
 # Load MediaPipe Pose Model

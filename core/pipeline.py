@@ -372,8 +372,6 @@ class VisionPipeline:
     # ----------------------------------------------------------------------
     def process(self, frame, frame_id):
 
-
-
         # YOLO on full frame: person + ball (fallback when crop unusable). Racket only from RT-DETR on crop.
         detections = self.detector.detect(frame, class_filter=['person', 'ball'])
         # --- PERSON → RACKET CROP LOGIC ---

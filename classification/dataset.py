@@ -288,7 +288,7 @@ OUTPUT_CSV = "pose_dataset.csv"
 # -------------------------
 def load_yolo():
     # Load YOLOv8 pretrained model for person detection
-    model = YOLO("models/yolo11m.pt")  # tiny model; replace with yolov8s/yolov8m if needed
+    model = YOLO("models_c/yolo11m.pt")  # tiny model; replace with yolov8s/yolov8m if needed
     return model
 
 # -------------------------

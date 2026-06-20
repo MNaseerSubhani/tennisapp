@@ -51,11 +51,9 @@ classification/
 From the **repository root**, create a virtual environment and install dependencies:
 
 ```bash
-python -m venv .venv
-# Windows
-.venv\Scripts\activate
-# macOS / Linux
-source .venv/bin/activate
+conda create --name tennis python=3.11
+
+conda activate tennis
 
 pip install -r requirements.txt
 pip install tensorflow pandas scikit-learn tqdm
@@ -63,7 +61,7 @@ pip install tensorflow pandas scikit-learn tqdm
 
 ### Required model files
 
-Place these under `classification/models/` before building the dataset:
+Place these under `classification/models_c/` before building the dataset:
 
 | File | Purpose | How to obtain |
 |------|---------|---------------|
@@ -125,7 +123,7 @@ python train.py
 3. Augments data (Gaussian noise + horizontal flip of x-coordinates).
 4. Trains a small dense Keras model (128 → 64 → softmax).
 5. Evaluates on a held-out 10% test split.
-6. Saves artifacts to `models/`:
+6. Saves artifacts to `models_c/`:
    - `tennis_pose_classifier.h5`
    - `labels.pkl`
    - `scaler.pkl`
@@ -183,10 +181,10 @@ No code changes are needed after retraining as long as artifact paths stay the s
 
 `core/infer.py` loads:
 
-- `classification/models/pose_landmarker_full.task`
-- `classification/models/tennis_pose_classifier.h5`
-- `classification/models/labels.pkl`
-- `classification/models/scaler.pkl`
+- `classification/models_c/pose_landmarker_full.task`
+- `classification/models_c/tennis_pose_classifier.h5`
+- `classification/models_c/labels.pkl`
+- `classification/models_c/scaler.pkl`
 
 For each frame in the impact window, the video pipeline:
 

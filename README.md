@@ -31,7 +31,7 @@ tannisapp/
 │   ├── court_lines.py        # Court line overlay
 │   └── overlay.py            # HUD / debug drawing
 ├── classification/           # Dataset build + model training (see classification/README.md)
-├── models/                   # YOLO / RT-DETR weights (not in git)
+├── models_c/                   # YOLO / RT-DETR weights (not in git)
 ├── storage/
 │   └── json_writer.py        # Save results.json
 ├── docs/
@@ -52,12 +52,9 @@ tannisapp/
 git clone https://github.com/MNaseerSubhani/tennisapp
 cd tannisapp
 
-python -m venv .venv
+conda create --name tennis python=3.11
 
-# Windows
-.venv\Scripts\activate
-# macOS / Linux
-source .venv/bin/activate
+conda activate tennis
 
 pip install -r requirements.txt
 pip install tensorflow pandas scikit-learn tqdm
@@ -86,7 +83,7 @@ mkdir models
 python app.py
 ```
 
-### 2. Classification models (`classification/models/`)
+### 2. Classification models (`classification/models_c/`)
 
 | File | Notes |
 |------|--------|
@@ -199,9 +196,9 @@ python app.py
 
 After training, these files must exist:
 
-- `classification/models/tennis_pose_classifier.h5`
-- `classification/models/labels.pkl`
-- `classification/models/scaler.pkl`
+- `classification/models_c/tennis_pose_classifier.h5`
+- `classification/models_c/labels.pkl`
+- `classification/models_c/scaler.pkl`
 
 ---
 
